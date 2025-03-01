@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        h2, h1 {
+            color: brown;
+            font-size:30px;;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        img {
+            vertical-align: middle;
+        }
+        .container {
+            position: relative;
+        }
+        .myslides {
+            display: none;
+        }
+        .cursor {
+            cursor: pointer;
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 40%;
+            width: auto;
+            padding: 16px;
+            margin-top: -50px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .numbertext {
+            color: blue;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+        .caption-container {
+            text-align: center;
+            background-color: grey;
+            padding: 2px 16px;
+            color: white;
+        }
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .column {
+            float: left;
+            width: 16.66%;
+        }
+        .demo {
+            opacity: 0.6;
+        }
+        .active, .demo:hover {
+            opacity: 1;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 30px;
+            cursor: pointer;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body bgcolor="black">
+<h1> Dave's Tools and Travels </h1>
+<hr>
+<h2> About Us </h2>
+<p> Former President Harry Truman established GSA on July 1, 1949, to streamline the administrative work of the federal government. GSA consolidated the National Archives Establishment, the Federal Works Agency, the Public Buildings Administration, the Bureau of Federal Supply, the Office of Contract Settlement, and the War Assets Administration into one federal agency tasked with administering supplies and providing workplaces for federal employees.</p>
+<div class="container">
+    <div class="myslides">
+        <div class="numbertext"> 1/6 </div>
+        <img src="https://img.freepik.com/free-vector/girlfriends-sit-car-roof-admire-beautiful-sunset-sunrise-picturesque-view-desert-with-asphalt-road-going-into-distance-through-rocks-cacti-friends-travel-cartoon-vector-illustration_107791-7832.jpg" width="100%">
+    </div>
+    <div class="myslides">
+        <div class="numbertext"> 2/6 </div>
+        <img src="https://img.freepik.com/free-vector/happy-family-travelling-by-car-with-camping-equipment-top_74855-10751.jpg" width="100%">
+    </div>
+    <div class="myslides">
+        <div class="numbertext"> 3/6 </div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJA3D9xQpI5FXntDUuWI_Bq7zCgH6YHcRGYQ&s" width="100%">
+    </div>
+    <div class="myslides">
+        <div class="numbertext"> 4/6 </div>
+        <img src="https://www.nps.gov/grca/planyourvisit/images/mather-point-2021.jpg" width="100%">
+    </div>
+    <div class="myslides">
+        <div class="numbertext"> 5/6 </div>
+        <img src="https://www.usnews.com/object/image/00000163-8d5b-d398-ad7f-8dffbc210000/16-colosseum-getty.jpg?update-time=1527086963060&size=responsive640" width="100%">
+    </div>
+    <div class="myslides">
+        <div class="numbertext"> 6/6 </div>
+        <img src="https://www.usnews.com/object/image/00000180-6260-d187-a5cb-fefd67170001/eiffel-tower-outro-stock.jpg?update-time=1650917926219&size=responsive640" width="100%">
+    </div>
+    <a class="prev" onclick="plusslides(-1)"> &#10094; </a>
+    <a class="next" onclick="plusslides(1)"> &#10095; </a>
+    <div class="caption-container">
+        <p id="caption"></p>
+    </div>
+    <div class="row">
+        <div class="column">
+            <img class="demo cursor" src="https://img.freepik.com/free-vector/girlfriends-sit-car-roof-admire-beautiful-sunset-sunrise-picturesque-view-desert-with-asphalt-road-going-into-distance-through-rocks-cacti-friends-travel-cartoon-vector-illustration_107791-7832.jpg" width="100%" height="250px" onclick="currentslide(1)">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="https://img.freepik.com/free-vector/happy-family-travelling-by-car-with-camping-equipment-top_74855-10751.jpg" width="100%" height="250px" onclick="currentslide(2)">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJA3D9xQpI5FXntDUuWI_Bq7zCgH6YHcRGYQ&s" width="100%" height="250px" onclick="currentslide(3)">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="https://www.nps.gov/grca/planyourvisit/images/mather-point-2021.jpg" width="100%" height="250px" onclick="currentslide(4)">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="https://www.usnews.com/object/image/00000163-8d5b-d398-ad7f-8dffbc210000/16-colosseum-getty.jpg?update-time=1527086963060&size=responsive640" width="100%" height="250px" onclick="currentslide(5)">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="https://www.usnews.com/object/image/00000180-6260-d187-a5cb-fefd67170001/eiffel-tower-outro-stock.jpg?update-time=1650917926219&size=responsive640" width="100%" height="250px" onclick="currentslide(6)">
+        </div>
+    </div>
+</div>
+<script>
+    let slideindex = 1;
+    showslides(slideindex);
+    function plusslides(n) {
+        showslides(slideindex += n);
+    }
+    function currentslide(n) {
+        showslides(slideindex = n);
+    }
+    function showslides(n) {
+        let i;
+        let slides = document.getElementsByClassName("myslides");
+        let dots = document.getElementsByClassName("demo");
+        let caption_text = document.getElementById("caption");
+        if (n > slides.length) {
+            slideindex = 1;
+        }
+        if (n < 1) {
+            slideindex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideindex - 1].style.display = "block";
+        dots[slideindex - 1].className += " active";
+        caption_text.innerHTML = dots[slideindex - 1].alt;
+    }
+</script>
+<center>
+    <button onclick="nextpage()"> Next </button>
+</center>
+</body>
+</html>
